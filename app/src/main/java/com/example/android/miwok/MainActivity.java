@@ -29,9 +29,43 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-        NumbersClickListener clickListener = new NumbersClickListener();
+
         TextView numbers = (TextView)findViewById(R.id.numbers);
-        numbers.setOnClickListener(clickListener);
+        TextView colors = (TextView)findViewById(R.id.colors);
+        TextView family = (TextView)findViewById(R.id.family);
+        TextView phrases = (TextView)findViewById(R.id.phrases);
+
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openNumbers = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(openNumbers);
+            }
+        });
+
+        colors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openColors = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(openColors);
+            }
+        });
+
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openFamily = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(openFamily);
+            }
+        });
+
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openPhrases = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(openPhrases);
+            }
+        });
     }
 
 /*    public void openNumbers(View view)
