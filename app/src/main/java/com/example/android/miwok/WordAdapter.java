@@ -1,12 +1,15 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,8 +20,12 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    public WordAdapter(Activity context, ArrayList<Word> words){
+    private int backgroundColor;
+
+    public WordAdapter(Activity context, ArrayList<Word> words, int background){
         super(context, 0, words);
+        backgroundColor = background;
+
     }
 
     @NonNull
@@ -41,17 +48,15 @@ public class WordAdapter extends ArrayAdapter<Word> {
         defaultWord.setText(currentWord.getDefaultWord());
 
         ImageView icon = (ImageView)listItemView.findViewById(R.id.icon_view);
-        if(currentWord.getIconImg()==0)
-        {
-            icon.setVisibility(View.GONE);
-        }
-        else {
-            icon.setImageResource(currentWord.getIconImg());
-        }
+        if(!currentWord.hasImage())
+            { icon.setImageResource(currentWord.getIconImg());        }
+        else
+            { icon.setVisibility(View.GONE);        }
+
+        LinearLayout textContainer = (LinearLayout)listItemView.findViewById(R.id.text_container);
+        //int color = ContextCompat.getColor(getContext(), backgroundColor);
+        textContainer.setBackgroundColor(backgroundColor);
 
         return listItemView;
-
-
-
     }
 }

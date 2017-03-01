@@ -14,7 +14,9 @@ public class Word{
     private String defaultWord = "";
 
     //sets icon for the relative word
-    private int iconImg;
+    private int iconImg = NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     //@param miwokW the miwok translation of the word
     //@param defaultW default language translation
@@ -40,4 +42,8 @@ public class Word{
     }
 
     public int getIconImg() { return iconImg;}
+
+    public boolean hasImage() {
+        return iconImg != NO_IMAGE_PROVIDED;
+    }
 }

@@ -27,7 +27,7 @@ public class NumbersActivity extends AppCompatActivity {
 
 
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_numbers);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
