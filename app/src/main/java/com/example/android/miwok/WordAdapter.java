@@ -33,6 +33,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         Word currentWord = getItem(position);
 
+        //retrieve miwok translation from activity java file
         TextView miwokWord = (TextView)listItemView.findViewById(R.id.miwok_text_view);
         miwokWord.setText(currentWord.getMiwokWord());
 
@@ -40,7 +41,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         defaultWord.setText(currentWord.getDefaultWord());
 
         ImageView icon = (ImageView)listItemView.findViewById(R.id.icon_view);
-        icon.setImageResource(currentWord.getIconImg());
+        if(currentWord.getIconImg()==0)
+        {
+            icon.setVisibility(View.GONE);
+        }
+        else {
+            icon.setImageResource(currentWord.getIconImg());
+        }
 
         return listItemView;
 

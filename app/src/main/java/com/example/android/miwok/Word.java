@@ -18,6 +18,11 @@ public class Word{
 
     //@param miwokW the miwok translation of the word
     //@param defaultW default language translation
+    public Word (String defaultW, String miwokW) {
+        miwokWord = miwokW;
+        defaultWord = defaultW;
+    }
+
     public Word (String defaultW, String miwokW, int resImgId) {
         miwokWord = miwokW;
         defaultWord = defaultW;

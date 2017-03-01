@@ -14,14 +14,14 @@ public class ColorsActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("rosso", "weṭeṭṭi", R.mipmap.ic_launcher));
-        words.add(new Word("verde", "chokokki", R.mipmap.ic_launcher));
-        words.add(new Word("marrone", "ṭakaakki", R.mipmap.ic_launcher));
-        words.add(new Word("grigio", "ṭopoppi", R.mipmap.ic_launcher));
-        words.add(new Word("nero", "kululli", R.mipmap.ic_launcher));
-        words.add(new Word("bianco", "kelelli", R.mipmap.ic_launcher));
-        words.add(new Word("giallo sporco", "ṭopiisә", R.mipmap.ic_launcher));
-        words.add(new Word("giallo mostarda", "chiwiiṭә", R.mipmap.ic_launcher));
+        words.add(new Word("rosso", "weṭeṭṭi", R.drawable.color_red));
+        words.add(new Word("verde", "chokokki", R.drawable.color_green));
+        words.add(new Word("marrone", "ṭakaakki", R.drawable.color_brown));
+        words.add(new Word("grigio", "ṭopoppi", R.drawable.color_gray));
+        words.add(new Word("nero", "kululli", R.drawable.color_black));
+        words.add(new Word("bianco", "kelelli", R.drawable.color_white));
+        words.add(new Word("giallo sporco", "ṭopiisә", R.drawable.color_dusty_yellow));
+        words.add(new Word("giallo mostarda", "chiwiiṭә", R.drawable.color_mustard_yellow));
 
 
 

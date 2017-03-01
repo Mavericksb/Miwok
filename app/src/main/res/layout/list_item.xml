@@ -4,34 +4,45 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/numbers_text_view"
-    android:paddingLeft="16dp"
-    android:paddingTop="16dp"
+
+    android:minHeight="@dimen/list_item_height"
+    android:background="@color/tan_background"
     >
 
     <ImageView
         android:id="@+id/icon_view"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        />
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"       />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/list_item_height"
         android:orientation="vertical"
-        android:paddingLeft="16dp">
+        android:paddingLeft="16dp"
+
+        android:background="@color/category_numbers"
+        >
 
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="6dp"
-            tools:text="miwok" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            tools:text="miwok"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/default_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="italiano" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            tools:text="italiano"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"/>
 
     </LinearLayout>
 

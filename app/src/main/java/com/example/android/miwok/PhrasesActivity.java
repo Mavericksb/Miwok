@@ -14,16 +14,16 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("Dove stai andando?", "minto wuksus", R.mipmap.ic_launcher));
-        words.add(new Word("Come ti chiami?", "tinnә oyaase'nә", R.mipmap.ic_launcher));
-        words.add(new Word("Mi chiamo...", "oyaaset...", R.mipmap.ic_launcher));
-        words.add(new Word("Come ti senti?", "michәksәs?", R.mipmap.ic_launcher));
-        words.add(new Word("Mi sento bene", "kuchi achit", R.mipmap.ic_launcher));
-        words.add(new Word("Stai arrivando?", "әәnәs'aa?", R.mipmap.ic_launcher));
-        words.add(new Word("Sì, sto arrivando", "hәә’ әәnәm", R.mipmap.ic_launcher));
-        words.add(new Word("Sto arrivando", "әәnәm", R.mipmap.ic_launcher));
-        words.add(new Word("Andiamo", "yoowutis", R.mipmap.ic_launcher));
-        words.add(new Word("Vieni qui", "әnni'nem", R.mipmap.ic_launcher));
+        words.add(new Word("Dove stai andando?", "minto wuksus"));
+        words.add(new Word("Come ti chiami?", "tinnә oyaase'nә"));
+        words.add(new Word("Mi chiamo...", "oyaaset..."));
+        words.add(new Word("Come ti senti?", "michәksәs?"));
+        words.add(new Word("Mi sento bene", "kuchi achit"));
+        words.add(new Word("Stai arrivando?", "әәnәs'aa?"));
+        words.add(new Word("Sì, sto arrivando", "hәә’ әәnәm"));
+        words.add(new Word("Sto arrivando", "әәnәm"));
+        words.add(new Word("Andiamo", "yoowutis"));
+        words.add(new Word("Vieni qui", "әnni'nem"));
 
 
 

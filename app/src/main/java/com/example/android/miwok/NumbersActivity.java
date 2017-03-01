@@ -14,16 +14,16 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("Uno", "Lutti", R.mipmap.ic_launcher));
-        words.add(new Word("Due", "Otiiko", R.mipmap.ic_launcher));
-        words.add(new Word("Tre", "Tolookosu", R.mipmap.ic_launcher));
-        words.add(new Word("Quattro", "Oyyisa", R.mipmap.ic_launcher));
-        words.add(new Word("Cinque", "Massokka", R.mipmap.ic_launcher));
-        words.add(new Word("Sei", "Temmokka", R.mipmap.ic_launcher));
-        words.add(new Word("Sette", "Kenekaku", R.mipmap.ic_launcher));
-        words.add(new Word("Otto", "Kawinta", R.mipmap.ic_launcher));
-        words.add(new Word("Nove", "Wo'e", R.mipmap.ic_launcher));
-        words.add(new Word("Dieci", "Na'aacha", R.mipmap.ic_launcher));
+        words.add(new Word("Uno", "Lutti", R.drawable.number_one));
+        words.add(new Word("Due", "Otiiko", R.drawable.number_two));
+        words.add(new Word("Tre", "Tolookosu", R.drawable.number_three));
+        words.add(new Word("Quattro", "Oyyisa", R.drawable.number_four));
+        words.add(new Word("Cinque", "Massokka", R.drawable.number_five));
+        words.add(new Word("Sei", "Temmokka", R.drawable.number_six));
+        words.add(new Word("Sette", "Kenekaku", R.drawable.number_seven));
+        words.add(new Word("Otto", "Kawinta", R.drawable.number_eight));
+        words.add(new Word("Nove", "Wo'e", R.drawable.number_nine));
+        words.add(new Word("Dieci", "Na'aacha", R.drawable.number_ten));
 
 
 
