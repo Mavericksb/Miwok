@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static android.support.v4.content.ContextCompat.getColor;
+
 /**
  * Created by ROBERTO on 27/02/2017.
  */
@@ -48,14 +50,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
         defaultWord.setText(currentWord.getDefaultWord());
 
         ImageView icon = (ImageView)listItemView.findViewById(R.id.icon_view);
-        if(!currentWord.hasImage())
+        if(currentWord.hasImage())
             { icon.setImageResource(currentWord.getIconImg());        }
         else
             { icon.setVisibility(View.GONE);        }
 
-        LinearLayout textContainer = (LinearLayout)listItemView.findViewById(R.id.text_container);
-        //int color = ContextCompat.getColor(getContext(), backgroundColor);
-        textContainer.setBackgroundColor(backgroundColor);
+        View textContainer = (View)listItemView.findViewById(R.id.text_container);
+        int color = getColor(getContext(), backgroundColor);
+        textContainer.setBackgroundColor(color);
 
         return listItemView;
     }
