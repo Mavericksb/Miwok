@@ -14,16 +14,16 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("Dove stai andando?", "minto wuksus"));
-        words.add(new Word("Come ti chiami?", "tinnә oyaase'nә"));
-        words.add(new Word("Mi chiamo...", "oyaaset..."));
-        words.add(new Word("Come ti senti?", "michәksәs?"));
-        words.add(new Word("Mi sento bene", "kuchi achit"));
-        words.add(new Word("Stai arrivando?", "әәnәs'aa?"));
-        words.add(new Word("Sì, sto arrivando", "hәә’ әәnәm"));
-        words.add(new Word("Sto arrivando", "әәnәm"));
-        words.add(new Word("Andiamo", "yoowutis"));
-        words.add(new Word("Vieni qui", "әnni'nem"));
+        words.add(new Word("Dove stai andando?", "minto wuksus", R.raw.phrase_where_are_you_going));
+        words.add(new Word("Come ti chiami?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
+        words.add(new Word("Mi chiamo...", "oyaaset...", R.raw.phrase_my_name_is));
+        words.add(new Word("Come ti senti?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+        words.add(new Word("Mi sento bene", "kuchi achit", R.raw.phrase_im_feeling_good));
+        words.add(new Word("Stai arrivando?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        words.add(new Word("Sì, sto arrivando", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        words.add(new Word("Sto arrivando", "әәnәm", R.raw.phrase_im_coming));
+        words.add(new Word("Andiamo", "yoowutis", R.raw.phrase_lets_go));
+        words.add(new Word("Vieni qui", "әnni'nem", R.raw.phrase_come_here));
 
 
 

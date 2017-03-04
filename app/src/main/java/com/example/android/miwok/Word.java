@@ -13,6 +13,8 @@ public class Word{
     //Default language translation
     private String defaultWord = "";
 
+    private int audioId;
+
     //sets icon for the relative word
     private int iconImg = NO_IMAGE_PROVIDED;
 
@@ -20,15 +22,18 @@ public class Word{
 
     //@param miwokW the miwok translation of the word
     //@param defaultW default language translation
-    public Word (String defaultW, String miwokW) {
+    public Word (String defaultW, String miwokW, int resAudioId) {
         miwokWord = miwokW;
         defaultWord = defaultW;
+        audioId = resAudioId;
     }
 
-    public Word (String defaultW, String miwokW, int resImgId) {
+
+    public Word (String defaultW, String miwokW, int resImgId, int resAudioId) {
         miwokWord = miwokW;
         defaultWord = defaultW;
         iconImg = resImgId;
+        audioId = resAudioId;
     }
 
     //Get the miwok translation
@@ -46,4 +51,7 @@ public class Word{
     public boolean hasImage() {
         return iconImg != NO_IMAGE_PROVIDED;
     }
+
+    public int getAudioId() { return audioId;}
+
 }
