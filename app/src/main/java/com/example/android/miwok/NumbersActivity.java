@@ -11,6 +11,8 @@ import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
+    private MediaPlayer mMediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +41,8 @@ public class NumbersActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MediaPlayer audioPlay = MediaPlayer.create(NumbersActivity.this, R.raw.number_one);
-                audioPlay.start();
+                mMediaPlayer = MediaPlayer.create(NumbersActivity.this, R.raw.number_one);
+                mMediaPlayer.start();
             }
         });
 
