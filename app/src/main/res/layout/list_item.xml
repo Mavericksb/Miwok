@@ -55,7 +55,7 @@
         android:layout_height="88dp"
         android:backgroundTintMode="add"
         android:padding="28dp"
-        android:src="@drawable/playicon"
+        android:src="@drawable/ic_play_circle_outline_black_24dp"
         />
 
 </LinearLayout>
