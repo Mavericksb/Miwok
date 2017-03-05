@@ -64,14 +64,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         final ImageView playIcon = (ImageView)listItemView.findViewById(R.id.play_icon);
         playIcon.setBackgroundColor(color);
-        playIcon.setOnClickListener(new View.OnClickListener() {
+        /*playIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MediaPlayer playTranslation = MediaPlayer.create(getContext(), currentWord.getAudioId());
                 playTranslation.start();
             }
         });
-
+        */
 
         return listItemView;
     }
