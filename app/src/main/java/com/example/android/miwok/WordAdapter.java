@@ -2,6 +2,8 @@ package com.example.android.miwok;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.media.Image;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -40,7 +43,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
-        Word currentWord = getItem(position);
+        final Word currentWord = getItem(position);
 
         //retrieve miwok translation from activity java file
         TextView miwokWord = (TextView)listItemView.findViewById(R.id.miwok_text_view);
@@ -58,6 +61,17 @@ public class WordAdapter extends ArrayAdapter<Word> {
         View textContainer = (View)listItemView.findViewById(R.id.text_container);
         int color = getColor(getContext(), backgroundColor);
         textContainer.setBackgroundColor(color);
+
+        final ImageView playIcon = (ImageView)listItemView.findViewById(R.id.play_icon);
+        playIcon.setBackgroundColor(color);
+        playIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MediaPlayer playTranslation = MediaPlayer.create(getContext(), currentWord.getAudioId());
+                playTranslation.start();
+            }
+        });
+
 
         return listItemView;
     }
