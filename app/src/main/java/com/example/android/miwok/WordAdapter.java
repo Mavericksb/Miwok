@@ -57,7 +57,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
     public WordAdapter(Activity context, ArrayList<Word> words, int background) {
         super(context, 0, words);
-        backgroundColor = background;
+        //backgroundColor = background;
 
         audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
 
@@ -90,14 +90,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         View textContainer = (View) listItemView.findViewById(R.id.text_container);
-        int color = getColor(getContext(), backgroundColor);
-        textContainer.setBackgroundColor(color);
+        //int color = getColor(getContext(), backgroundColor);
+        //textContainer.setBackgroundColor(color);
 
 
 
 
         final ImageView playIcon = (ImageView) listItemView.findViewById(R.id.play_icon);
-        playIcon.setBackgroundColor(color);
+        //playIcon.setBackgroundColor(color);
         playIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
